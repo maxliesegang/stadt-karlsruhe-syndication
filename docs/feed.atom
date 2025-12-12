@@ -2,12 +2,43 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.karlsruhe.de/aktuelles</id>
     <title>Stadt Karlsruhe - Aktuelle Meldungen</title>
-    <updated>2025-12-12T12:54:07.320Z</updated>
+    <updated>2025-12-12T16:32:15.866Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.karlsruhe.de/aktuelles"/>
     <link rel="self" href="https://maxliesegang.github.io/stadt-karlsruhe-syndication/feed.atom"/>
     <subtitle>Offizielle Nachrichten der Stadt Karlsruhe</subtitle>
     <rights>Stadt Karlsruhe 2025</rights>
+    <entry>
+        <title type="html"><![CDATA[OB gratuliert Rosenberg und Dr. Kramer]]></title>
+        <id>21c0de161691207f9072a6fdd10d1e60</id>
+        <link href="https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/ob-gratuliert-rosenberg-und-dr-kramer"/>
+        <updated>2025-12-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Karlsruherin Solange Rosenberg und Karlsruher Dr. Kurt Kramer erhalten Verdienstkreuz am Bande des Verdienstordens der Bundesrepublik Deutschland.]]></summary>
+        <content type="html"><![CDATA[<div id="readability-page-1" class="page"><div itemprop="articleBody">
+                                        <p><strong>Oberbürgermeister Dr. Frank Mentrup</strong> hat <strong>Solange Rosenberg, der&nbsp;Geschäftsführerin der&nbsp;"Gesellschaft für&nbsp;Christlich-Jüdische Zusammenarbeit"</strong>, sowie <strong>Dr. Kurt Kramer</strong> zur Auszeichnung mit dem&nbsp;Verdienstkreuz am Bande des Verdienstordens der Bundesrepublik Deutschland gratuliert.</p>
+<p>Über Solange schreibt Mentrup, dass Bundespräsident Frank-Walter Steinmeier "Ihr langjähriges von Menschlichkeit und hoher Kompetenz geprägtes politisches und ehrenamtliches Engagement für das Gemeinwohl" ausgezeichnet habe. Ihr&nbsp;Herzensanliegen sei der Dialog der Religionen, Solange sei eine "unermüdliche Brückenbauerin für das jüdische Leben als ein integraler Bestandteil der Stadtgesellschaft".</p>
+<p>Im Schreiben an Dr. Kramer hebt das Stadtoberhaupt das Engagement für Glocken hervor: "Durch Ihre Verdienste und Publikationen zählen Sie weltweit zu den führenden Experten, als Glockensachverständiger sind Sie hochgeschätzt und gefragt."</p>
+<p>Beiden wünscht der Karlsruher Oberbürgermeister "viel Glück und weiterhin viel Erfolg".</p>
+
+                                    </div></div>]]></content>
+        <published>2025-12-12T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DER BALL Karlsruhe: erfolgreiche Premiere]]></title>
+        <id>64ff55a1ab1046188d221db1583e2e2b</id>
+        <link href="https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/der-ball-karlsruhe-erfolgreiche-premiere"/>
+        <updated>2025-12-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Folgetermin für Veranstaltung angekündigt: 16. Januar 2027.]]></summary>
+        <content type="html"><![CDATA[<div id="readability-page-1" class="page"><div itemprop="articleBody">
+                                        <p>Die Erfolgsgeschichte von DER BALL geht weiter: 2027 wird die Veranstaltung fortgesetzt. Der nächste Termin steht bereits fest: <strong>DER BALL findet am 16. Januar 2027 in der Schwarzwald- und Gartenhalle stat</strong>t. Schon jetzt ist sicher, dass das KIT Tanzorchester und das Badische Staatstheater wieder mit dabei sein werden.</p>
+<p>Im November wurde eine neue Tradition ins Leben gerufen. Bei „DER BALL. Wir feiern das KIT“ verwandelte sich die Schwarzwald- und Gartenhalle im innerstädtischen Kongresszentrum Messe Karlsruhe in einen glanzvollen Treffpunkt der Stadtgesellschaft. Die Stadt Karlsruhe und die Region initiierten dieses neue gesellschaftliche Format gemeinsam mit dem Badischen Staatstheater und dem Karlsruher Institut für Technologie (KIT). Die Gesamtverantwortung für die Umsetzung lag bei der Eventagentur u-motions.</p>
+<p>Die Premiere stieß auf große Resonanz: Rund 1.700 Gäste aller Altersgruppen nahmen teil. Auch die Medien lobten den gelungenen Neustart der Karlsruher Balltradition. Besonders hervorgehoben wurde, dass traditionsreiche Schwarzwaldhalle – die lange Zeit vor allem für Comedy-, Verkaufs- und Messeveranstaltungen genutzt wurde – wieder als Ballsaal überzeugte.</p>
+<h4>Klassischer Ballcharakter mit modernen Elementen</h4>
+<p>Die Agentur u-motions war für das festliche Erscheinungsbild verantwortlich und inszenierte beide Hallen neu. Das Programm verband klassischen Ballcharakter mit modernen Elementen: Die Eröffnung übernahmen das Staatsballett und die Staatskapelle des Badischen Staatstheaters Karlsruhe. Für Tanzmusik im weiteren Verlauf des Abends sorgte das Uni-Orchester des KIT. Showeinlagen sowie ein ergänzendes Angebot in der Gartenhalle mit Liveband und Foodtrucks rundeten den Abend ab.</p>
+<p>Informationen zu Programm, Karten und Sponsoring-Paketen sind unter der Website <a href="https://derball.de/" title="Link zur Seite" target="_blank" rel="noreferrer">derball.de</a> verfügbar.</p>
+                                    </div></div>]]></content>
+        <published>2025-12-12T00:00:00.000Z</published>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Entwarnung: Kein Blindgänger im Karlsruher Klärwerk]]></title>
         <id>ade2e223aca2c9cf16965dc9eda32558</id>
@@ -109,60 +140,5 @@
 <p>Die vollständige Tagesordnung ist im <strong><a href="https://sitzungskalender.karlsruhe.de/db/ratsinformation/termin-9903" title="Link zur Seite" target="_blank" rel="noreferrer">Ratsinformationssystem</a></strong> abrufbar.</p>
                                     </div></div>]]></content>
         <published>2025-12-11T00:00:00.000Z</published>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Auftakt für die World Games 2029 in Karlsruhe]]></title>
-        <id>f9f173d9238560e42763cfa4657032eb</id>
-        <link href="https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/auftakt-fuer-die-world-games-2029-in-karlsruhe"/>
-        <updated>2025-12-11T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[IWGA-Präsident José Perurena besucht für die erste Sitzung des Koordinierungskomitees Karlsruhe. Oberbürgermeister Dr. Frank Mentrup empfängt ihn im Rathaus.]]></summary>
-        <content type="html"><![CDATA[<div id="readability-page-1" class="page"><div itemprop="articleBody">
-                                        <p>Jetzt kommen die World Games ins Rollen. Zum Auftakt der ersten Sitzung des sogenannten Koordinierungskomitees waren nicht nur Fachleute der <a href="https://www.theworldgames.org/" title="Link zur Seite" target="_blank" rel="noreferrer">International World Games Association</a> (IWGA) nach Karlsruhe gereist, sondern ebenso ihr Präsident. Karlsruhes Oberbürgermeister Dr. Frank Mentrup begrüßte seinen bedeutenden Gast mit einem Empfang herzlich im Bürgersaal: „Ihr Besuch ist ein Zeichen der Wertschätzung und zugleich ein Symbol zum Start unserer wachsenden Partnerschaft und erfolgreichen Kooperation.“</p>
-<p>Bei der Visite von IWGA-Präsident José Perurena präsentierte das Karlsruher Organisationskomitee auch die World-Games-Flagge. Mit Blick auf den repräsentativen Stoff betonte Mentrup die Werte der Weltspiele: „Wenn wir auf diese Fahne blicken, sehen wir mehr als Farben und Formen.“ Es gehe um Vielfalt, Inklusion, Spitzensport und die Entwicklung neuer Sportarten.</p>
-<h4>Eintrag in das Goldene Buch</h4>
-<p>Perurena, der sich darüber hinaus in das Goldene Buch der Stadt eintrug, war sichtlich von <a href="https://www.karlsruhe-erleben.de/veranstaltungen/world-games-2029" target="_blank" rel="noreferrer">Karlsruhe</a> angetan: „Es ist eine große Freude und Ehre, hier in diesem Rathaus zu sein, was den Start unserer gemeinsamen Reise zu den <a href="https://www.karlsruhe.de/themen/world-games-2029" title="Link zur Seite" target="_blank">World Games 2029</a> markiert.“ Bei dem Empfang für die IWGA gab Mentrup zwei wichtige finanzielle Entscheidungen bekannt: Vor wenigen Tagen seien die Förderbescheide von Bund und Land eingegangen.</p>
-<p>Zuvor hatten sich die Karlsruher Sportexperten mit denen der IWGA getroffen. Im Koordinierungsausschuss ging es unter anderem um den organisatorischen Fahrplan und &nbsp;die Budgetplanung. Im Januar soll ein Rückblick auf die diesjährigen Spiele in Chengdu folgen. Diese Veranstaltung wird in Frankfurt stattfinden. Für den April 2026 ist eine weitere Sitzung des Koordinierungsausschusses geplant.</p>
-                                    </div></div>]]></content>
-        <published>2025-12-11T00:00:00.000Z</published>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Bombe nahe Marylandschule entschärft]]></title>
-        <id>49ec1ba2b327e982e8c382242884bae0</id>
-        <link href="https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/bombe-nahe-marylandschule-entschaerft"/>
-        <updated>2025-12-10T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Der Kampfmittelbeseitigungsdienst hat am Mittwoch, 10. Dezember den nahe der Marylandschule freigelegten Blindgänger aus dem Zweiten Weltkrieg entschärft. Rund 150 Menschen waren von der Evakuierung betroffen.]]></summary>
-        <content type="html"><![CDATA[<div id="readability-page-1" class="page"><div>
-                                            
-                                                
-                                                    
-                                                        
-
-
-<picture>
-    <source media="(min-width: 992px)" data-srcset="/fileadmin/_processed_/e/0/csm_2025-12-10_17-14-27_Blindgaenger-Marylandschule_Foto_Florian_Kaute_cffd9d08b8.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <source media="(min-width: 768px)" data-srcset="/fileadmin/_processed_/e/0/csm_2025-12-10_17-14-27_Blindgaenger-Marylandschule_Foto_Florian_Kaute_a23d1d1214.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <source media="(min-width: 0)" data-srcset="/fileadmin/_processed_/e/0/csm_2025-12-10_17-14-27_Blindgaenger-Marylandschule_Foto_Florian_Kaute_49dfc0aec3.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <img alt="Der entschärfte Blindgänger an der Marylandschule auf einem Transporter. " title="" data-src="/fileadmin/_processed_/e/0/csm_2025-12-10_17-14-27_Blindgaenger-Marylandschule_Foto_Florian_Kaute_0abcfc6378.jpg" width="100%" src="https://www.karlsruhe.de/fileadmin/_processed_/e/0/csm_2025-12-10_17-14-27_Blindgaenger-Marylandschule_Foto_Florian_Kaute_0abcfc6378.jpg">
-</picture>
-
-        <p><span>Die 50 Kilogramm schwere Bombe aus dem Zweiten Weltkrieg nahe der Marylandschule konnte erfolgreich entschärft werden. </span>
-    
-
-        
-            <span>© Stadt Karlsruhe, Presse- und Informationsamt, Florian Kaute</span>
-        
-    
-
-                                                    
-                                                    
-                                                    
-                                                
-                                            
-                                        </p></div><div itemprop="articleBody">
-                                        <p>Der Kampfmittelbeseitigungsdienst hat am Mittwoch, 10. Dezember den nahe der Marylandschule freigelegten Blindgänger aus dem Zweiten Weltkrieg entschärft. Zuvor war das betroffene Sperrgebiet evakuiert worden. Betroffen waren neben der Marylandschule unter anderem auch die Duale Hochschule sowie 15 Mehrfamilienhäuser. Insgesamt mussten rund 150 Menschen evakuiert werden. In der nahegelegenen Anlaufstelle im NCO-Club fanden sich rund 25 Betroffene zwischenzeitlich ein.</p>
-<p>Sicherheitshalber waren auch die im Evakuierungsgebiet liegenden Straßenabschnitte gesperrt. Die Tramlinie 1 musste während der Entschärfung umgeleitet werden. Gegen 16 Uhr konnte der Entschärfungstrupp planmäßig seine Arbeit aufnehmen. Die Experten erledigten ihren Auftrag an der 50 Kilogramm schweren Fliegerbombe und meldeten um 17:10 Uhr Vollzug, um somit offiziell Entwarnung geben zu können.</p>
-<p>Anwohnerinnen und Anwohner kehren in ihre evakuierten Häuser zurück. Neben dem Kampfmittelbeseitigungsdienst, Ordnungs- und Bürgeramt, Karlsruher Verkehrsverbund und weiteren beteiligten Akteuren waren insgesamt rund 30 Polizei- und Rettungskräfte im Einsatz.</p>
-                                    </div></div>]]></content>
-        <published>2025-12-10T00:00:00.000Z</published>
     </entry>
 </feed>
