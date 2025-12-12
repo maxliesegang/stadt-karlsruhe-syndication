@@ -1,0 +1,22 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+*.tsbuildinfo
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+
+# Generated files
+docs/feed.atom
+data/tracking.json
+
+# Logs
+*.log
+
+# OS
+.DS_Store

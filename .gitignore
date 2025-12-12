@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+bun.lockb
+package-lock.json
+yarn.lock
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+tmp/
+temp/
+
+# NOTE: docs/ and data/ are intentionally NOT ignored
+# They contain generated files that must be committed to git:
+# - docs/feed.atom (served via GitHub Pages)
+# - data/tracking.json (persistent state for change detection)
