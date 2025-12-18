@@ -9,14 +9,9 @@ import {
   type TrackingService,
 } from './tracking.service.js';
 import { feedService as defaultFeedService, type FeedService } from './feed.service.js';
+import type { ISyndicationService, FeedRunSummary } from '../interfaces/services.js';
 
-export interface FeedRunSummary {
-  totalArticles: number;
-  newArticles: number;
-  updated: number;
-  unchanged: number;
-  durationMs: number;
-}
+export type { FeedRunSummary };
 
 interface SyndicationDependencies {
   logger: Logger;
@@ -26,7 +21,7 @@ interface SyndicationDependencies {
   feedService: FeedService;
 }
 
-export class SyndicationService {
+export class SyndicationService implements ISyndicationService {
   private readonly logger: Logger;
   private readonly scraperService: SyndicationDependencies['scraperService'];
   private readonly parserService: SyndicationDependencies['parserService'];
@@ -79,7 +74,7 @@ export class SyndicationService {
     const changes = this.trackingService.detectChanges(detailedArticles, tracking);
 
     await this.feedService.generate(detailedArticles);
-    await this.trackingService.save(tracking);
+    await this.trackingService.save(changes.updatedTracking);
 
     const summary: FeedRunSummary = {
       totalArticles: detailedArticles.length,

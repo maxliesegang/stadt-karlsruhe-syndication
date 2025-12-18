@@ -1,82 +1,50 @@
 import * as cheerio from 'cheerio';
 import type { AnyNode } from 'domhandler';
-import { createHash } from 'node:crypto';
 import type { ArticlePreview } from '../schemas/article.js';
 import { logger } from '../lib/logger.js';
 import { ParseError } from '../lib/errors.js';
 import { env } from '../lib/env.js';
 import { contentExtractorService } from './content-extractor.service.js';
+import {
+  ARTICLE_SELECTORS,
+  TITLE_SELECTORS,
+  DESCRIPTION_SELECTORS,
+  DATE_SELECTORS,
+} from '../config/selectors.js';
+import { GermanDateParser } from '../utils/german-date-parser.utils.js';
+import { LinkNormalizer } from '../utils/link.utils.js';
+import { HtmlTextExtractor } from '../utils/html-text.utils.js';
+import { IdGenerator } from '../utils/id-generator.utils.js';
+import { ArticleElementFinder } from '../utils/article-finder.utils.js';
+import type { IParserService } from '../interfaces/services.js';
 
-const GERMAN_MONTHS: Record<string, number> = {
-  Januar: 0,
-  Februar: 1,
-  März: 2,
-  April: 3,
-  Mai: 4,
-  Juni: 5,
-  Juli: 6,
-  August: 7,
-  September: 8,
-  Oktober: 9,
-  November: 10,
-  Dezember: 11,
-};
+export class ParserService implements IParserService {
+  private readonly dateParser: GermanDateParser;
+  private readonly linkNormalizer: LinkNormalizer;
+  private readonly textExtractor: HtmlTextExtractor;
+  private readonly idGenerator: IdGenerator;
+  private readonly elementFinder: ArticleElementFinder;
 
-const ARTICLE_SELECTORS = [
-  '.karlTabs__tab-pane.show.active .news-item',
-  '.newsroom .news-item',
-  '.newsroom__item-wrapper .news-item',
-  '.article',
-  '[class*="news"]',
-  '[class*="meldung"]',
-  '.teaser',
-  '[class*="teaser"]',
-  'article',
-  '.content-item',
-  '.list-item',
-];
+  constructor(
+    dateParser?: GermanDateParser,
+    linkNormalizer?: LinkNormalizer,
+    textExtractor?: HtmlTextExtractor,
+    idGenerator?: IdGenerator,
+    elementFinder?: ArticleElementFinder
+  ) {
+    this.dateParser = dateParser ?? new GermanDateParser();
+    this.linkNormalizer = linkNormalizer ?? new LinkNormalizer(env.BASE_URL, env.SOURCE_URL);
+    this.textExtractor = textExtractor ?? new HtmlTextExtractor();
+    this.idGenerator = idGenerator ?? new IdGenerator();
+    this.elementFinder = elementFinder ?? new ArticleElementFinder();
+  }
 
-const TITLE_SELECTORS = [
-  'h1',
-  'h2',
-  'h3',
-  'h4',
-  '.title',
-  '[class*="title"]',
-  '[class*="headline"]',
-];
-const DESCRIPTION_SELECTORS = [
-  '.news-item__teaser',
-  'p.mt-1',
-  'p:not(.news-item__date)',
-  '.description',
-  '[class*="description"]',
-  '.text',
-  '[class*="text"]',
-];
-const DATE_SELECTORS = ['.date', '[class*="date"]', 'time', '.published', '[class*="published"]'];
-
-export class ParserService {
   parseGermanDate(text: string): Date {
-    const now = new Date();
-    const trimmed = text.trim();
-
-    const relativeDate = this.parseRelativeDate(trimmed, now);
-    if (relativeDate) return relativeDate;
-
-    const absoluteDate = this.parseAbsoluteDate(trimmed);
-    if (absoluteDate) return absoluteDate;
-
-    logger.warn({ dateText: trimmed }, 'Could not parse date, using current date');
-    return now;
+    return this.dateParser.parse(text);
   }
 
   generateId(content: string, date: Date): string {
-    // Generate MD5 hash of the detail page content + date
-    // This ensures different dates create different IDs even for same content
-    const dateStr = date.toISOString().split('T')[0]; // YYYY-MM-DD
-    const hashInput = `${dateStr}|${content}`;
-    return createHash('md5').update(hashInput).digest('hex');
+    return this.idGenerator.generate(content, date);
   }
 
   parseDetailPage(html: string, url: string): string {
@@ -94,41 +62,13 @@ export class ParserService {
 
     try {
       const $ = cheerio.load(html);
-      const elements = this.findArticleElements($);
+      const elements = this.elementFinder.findElements($, ARTICLE_SELECTORS);
       const articles: ArticlePreview[] = [];
 
       elements.each((_, element) => {
-        try {
-          const $el = $(element);
-          const title = this.extractText($el, TITLE_SELECTORS);
-          if (!title) {
-            logger.debug('Skipping article element: no title found');
-            return;
-          }
-
-          const rawLink = $el.find('a').first().attr('href') || '';
-          const link = this.normalizeLink(rawLink);
-
-          // Skip articles without valid links
-          if (!this.isValidUrl(link)) {
-            logger.debug({ title }, 'Skipping article: invalid or missing link');
-            return;
-          }
-
-          const description = this.extractDescription($el, title);
-          const dateText = this.extractDateText($el);
-          const date = this.parseGermanDate(dateText);
-
-          articles.push({
-            title: title.trim(),
-            date,
-            link,
-            description: description.trim(),
-          });
-        } catch (error) {
-          // Continue parsing other articles; individual failures should not abort the run
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-          logger.warn({ error }, 'Failed to parse individual article');
+        const article = this.parseArticleElement($(element));
+        if (article) {
+          articles.push(article);
         }
       });
 
@@ -142,150 +82,41 @@ export class ParserService {
     }
   }
 
-  private parseRelativeDate(text: string, reference: Date): Date | null {
-    const relativePatterns: Array<{ regex: RegExp; transform: (value: number) => number }> = [
-      { regex: /vor\s+(\d+)\s+Stunden?/i, transform: (hours) => hours * 60 * 60 * 1000 },
-      { regex: /vor\s+(\d+)\s+Minuten?/i, transform: (minutes) => minutes * 60 * 1000 },
-      { regex: /vor\s+(\d+)\s+Tagen?/i, transform: (days) => days * 24 * 60 * 60 * 1000 },
-    ];
-
-    for (const { regex, transform } of relativePatterns) {
-      const match = text.match(regex);
-      if (match) {
-        const value = Number.parseInt(match[1], 10);
-        return new Date(reference.getTime() - transform(value));
-      }
-    }
-
-    if (/gestern/i.test(text)) {
-      return new Date(reference.getTime() - 24 * 60 * 60 * 1000);
-    }
-
-    if (/heute/i.test(text)) {
-      return reference;
-    }
-
-    return null;
-  }
-
-  private parseAbsoluteDate(text: string): Date | null {
-    const monthPattern = /(\d{1,2})\.\s+(\w+)\s+(\d{4})/;
-    const numericPattern = /(\d{1,2})\.(\d{1,2})\.(\d{4})/;
-    const isoPattern = /(\d{4})-(\d{2})-(\d{2})/;
-
-    const monthMatch = text.match(monthPattern);
-    if (monthMatch) {
-      const [, day, monthName, year] = monthMatch;
-      const month = GERMAN_MONTHS[monthName];
-      if (month !== undefined) {
-        return new Date(Number.parseInt(year, 10), month, Number.parseInt(day, 10));
-      }
-    }
-
-    const numericMatch = text.match(numericPattern);
-    if (numericMatch) {
-      const [, day, month, year] = numericMatch;
-      return new Date(
-        Number.parseInt(year, 10),
-        Number.parseInt(month, 10) - 1,
-        Number.parseInt(day, 10)
-      );
-    }
-
-    const isoMatch = text.match(isoPattern);
-    if (isoMatch) {
-      const [, year, month, day] = isoMatch;
-      return new Date(
-        Number.parseInt(year, 10),
-        Number.parseInt(month, 10) - 1,
-        Number.parseInt(day, 10)
-      );
-    }
-
-    return null;
-  }
-
-  private extractText(
-    element: cheerio.Cheerio<AnyNode>,
-    selectors: string[],
-    fallback = ''
-  ): string {
-    for (const selector of selectors) {
-      const text = element.find(selector).first().text().trim();
-      if (text) return this.decodeHtmlEntities(text);
-    }
-    return fallback.trim();
-  }
-
-  private decodeHtmlEntities(text: string): string {
-    // Cheerio's .text() already decodes most entities, but handle edge cases
-    return text
-      .replace(/&nbsp;/g, ' ')
-      .replace(/&shy;/g, '')
-      .replace(/\s+/g, ' ')
-      .trim();
-  }
-
-  private extractDescription(element: cheerio.Cheerio<AnyNode>, fallback: string): string {
-    const description = this.extractText(element, DESCRIPTION_SELECTORS);
-    if (description) return description;
-
-    // Find first paragraph that doesn't have date-related classes
-    const paragraphs = element.find('p');
-    for (let i = 0; i < paragraphs.length; i++) {
-      const p = paragraphs.eq(i);
-      const classList = p.attr('class') || '';
-      if (!classList.includes('date') && !classList.includes('published')) {
-        const text = p.text().trim();
-        if (text) return text;
-      }
-    }
-
-    return fallback;
-  }
-
-  private extractDateText(element: cheerio.Cheerio<AnyNode>): string {
-    const timeElement = element.find('time[datetime]').first();
-    const dateAttr = timeElement.attr('datetime');
-    if (dateAttr) {
-      return dateAttr;
-    }
-
-    const dateText = this.extractText(element, DATE_SELECTORS);
-    if (dateText) {
-      return dateText;
-    }
-
-    return element.text();
-  }
-
-  private normalizeLink(link: string): string {
-    if (!link) return '';
-    if (link.startsWith('/')) return new URL(link, env.BASE_URL).href;
-    if (!link.startsWith('http')) return new URL(link, env.SOURCE_URL).href;
-    return link;
-  }
-
-  private isValidUrl(url: string): boolean {
-    if (!url) return false;
+  private parseArticleElement(element: cheerio.Cheerio<AnyNode>): ArticlePreview | null {
     try {
-      new URL(url);
-      return true;
-    } catch {
-      return false;
-    }
-  }
-
-  private findArticleElements($: cheerio.CheerioAPI): cheerio.Cheerio<AnyNode> {
-    for (const selector of ARTICLE_SELECTORS) {
-      const found = $(selector);
-      if (found.length > 0) {
-        logger.debug({ selector, count: found.length }, 'Found article elements');
-        return found;
+      const title = this.textExtractor.extractText(element, TITLE_SELECTORS);
+      if (!title) {
+        logger.debug('Skipping article element: no title found');
+        return null;
       }
-    }
 
-    throw new ParseError('No article elements found. HTML structure may have changed.');
+      const rawLink = element.find('a').first().attr('href') || '';
+      const link = this.linkNormalizer.normalize(rawLink);
+
+      if (!this.linkNormalizer.isValid(link)) {
+        logger.debug({ title }, 'Skipping article: invalid or missing link');
+        return null;
+      }
+
+      const description = this.textExtractor.extractDescription(
+        element,
+        DESCRIPTION_SELECTORS,
+        title
+      );
+      const dateText = this.textExtractor.extractDateText(element, DATE_SELECTORS);
+      const date = this.parseGermanDate(dateText);
+
+      return {
+        title: title.trim(),
+        date,
+        link,
+        description: description.trim(),
+      };
+    } catch (error) {
+      // Continue parsing other articles; individual failures should not abort the run
+      logger.warn({ error }, 'Failed to parse individual article');
+      return null;
+    }
   }
 }
 

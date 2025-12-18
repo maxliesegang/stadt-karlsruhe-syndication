@@ -5,8 +5,9 @@ import type { Article } from '../schemas/article.js';
 import { logger } from '../lib/logger.js';
 import { FileSystemError } from '../lib/errors.js';
 import { env } from '../lib/env.js';
+import type { IFeedService } from '../interfaces/services.js';
 
-export class FeedService {
+export class FeedService implements IFeedService {
   async generate(articles: Article[], outputPath: string = env.OUTPUT_FILE): Promise<void> {
     try {
       const feed = new Feed({

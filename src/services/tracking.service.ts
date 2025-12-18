@@ -5,14 +5,23 @@ import { trackingDataSchema } from '../schemas/article.js';
 import { logger } from '../lib/logger.js';
 import { FileSystemError } from '../lib/errors.js';
 import { env } from '../lib/env.js';
+import { TrackingEntryFactory } from '../utils/tracking-entry.factory.js';
+import type { ITrackingService } from '../interfaces/services.js';
 
 export interface ChangeDetectionResult {
   newArticles: Article[];
   updated: Article[];
   unchanged: number;
+  updatedTracking: TrackingData;
 }
 
-export class TrackingService {
+export class TrackingService implements ITrackingService {
+  private readonly entryFactory: TrackingEntryFactory;
+
+  constructor(entryFactory?: TrackingEntryFactory) {
+    this.entryFactory = entryFactory ?? new TrackingEntryFactory();
+  }
+
   async load(filePath: string = env.TRACKING_FILE): Promise<TrackingData> {
     try {
       const content = await readFile(filePath, 'utf-8');
@@ -57,11 +66,21 @@ export class TrackingService {
     }
   }
 
+  /**
+   * Detects changes in articles compared to tracking data
+   * Returns a new tracking data object without mutating the input (immutable)
+   * @param articles - Articles to check for changes
+   * @param tracking - Existing tracking data
+   * @returns Change detection results including new tracking data
+   */
   detectChanges(articles: Article[], tracking: TrackingData): ChangeDetectionResult {
     const newArticles: Article[] = [];
     const updated: Article[] = [];
     let unchanged = 0;
     const now = new Date().toISOString();
+
+    // Create a new tracking object (immutable approach)
+    const updatedTracking: TrackingData = { ...tracking };
 
     for (const article of articles) {
       const existing = tracking[article.id];
@@ -69,23 +88,18 @@ export class TrackingService {
       if (!existing) {
         // New article (ID not seen before)
         newArticles.push(article);
-        tracking[article.id] = {
-          contentHash: article.id, // ID is already the content hash
-          lastSeen: now,
-          link: article.link,
-        };
+        updatedTracking[article.id] = this.entryFactory.create(article.id, article.link, now);
       } else if (existing.link !== article.link) {
         // Content hash (ID) is the same but link changed
         updated.push(article);
-        tracking[article.id] = {
-          contentHash: article.id,
-          lastSeen: now,
-          link: article.link,
-        };
+        updatedTracking[article.id] = this.entryFactory.create(article.id, article.link, now);
       } else {
-        // Unchanged
+        // Unchanged - update lastSeen
         unchanged++;
-        tracking[article.id].lastSeen = now;
+        updatedTracking[article.id] = {
+          ...existing,
+          lastSeen: now,
+        };
       }
     }
 
@@ -98,7 +112,7 @@ export class TrackingService {
       'Change detection complete'
     );
 
-    return { newArticles, updated, unchanged };
+    return { newArticles, updated, unchanged, updatedTracking };
   }
 }
 
