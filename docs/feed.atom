@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.karlsruhe.de/aktuelles</id>
     <title>Stadt Karlsruhe - Aktuelle Meldungen</title>
-    <updated>2025-12-17T20:30:47.829Z</updated>
+    <updated>2025-12-18T04:38:23.570Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.karlsruhe.de/aktuelles"/>
     <link rel="self" href="https://maxliesegang.github.io/stadt-karlsruhe-syndication/feed.atom"/>
@@ -22,7 +22,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Flexibilität bleibt erhalten]]></title>
-        <id>92055e1b6cdc83f95fea735f033a4228</id>
+        <id>e09d5d1a47d438b74213e6aa7df2d4db</id>
         <link href="https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/flexibilitaet-bleibt-erhalten"/>
         <updated>2025-12-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Mehrheitlich hat sich der Gemeinderat im Rahmen der Haushaltsberatungen für einen neuen Kompromissvorschlag der Verwaltung ausgesprochen, die Ergänzende Betreuung und die Flexible Nachmittagsbetreuung für einen Übergangszeitraum zu erhalten.]]></summary>
@@ -41,7 +41,7 @@
                         <div>
 
                                 <p><time itemprop="datePublished" datetime="2025-12-17">
-                                        vor 2 Stunden
+                                        Gestern
                                     </time>
                                 </p>
 
@@ -254,7 +254,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Richtige Entsorgung zu den Feiertagen und an Silvester]]></title>
-        <id>1c7a46e78e4585fe5f32cd9c6fa4fded</id>
+        <id>4d75b699cac69dcca4fa7d0e0d250fec</id>
         <link href="https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/richtige-entsorgung-zu-den-feiertagen-und-an-silvester"/>
         <updated>2025-12-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Das Team Sauberes Karlsruhe erinnert an die richtige Entsorgung von Abfällen zu den Feiertagen und an Silvester.]]></summary>
@@ -273,7 +273,7 @@
                         <div>
 
                                 <p><time itemprop="datePublished" datetime="2025-12-17">
-                                        vor 3 Stunden
+                                        Gestern
                                     </time>
                                 </p>
 
@@ -348,7 +348,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Sparen mit Ausnahmen im Kulturbereich]]></title>
-        <id>f06b4bb6fbc51e9428db23e3add4a533</id>
+        <id>02cef9add4b30810ae38cfad444850c4</id>
         <link href="https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/kultur-muss-gewissen-beitrag-leisten"/>
         <updated>2025-12-16T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Im Kulturbereich will die Stadt weniger sparen: In den Haushaltsberatungen entschied der Rat für eine Halbierung der Zuschüsse im institutionellen und quasi-institutionellen Bereich, die Projektförderung bleibt an einigen Stellen erhalten.]]></summary>
@@ -367,7 +367,7 @@
                         <div>
 
                                 <p><time itemprop="datePublished" datetime="2025-12-16">
-                                        Gestern
+                                        Dienstag, 16. Dezember 2025
                                     </time>
                                 </p>
 
