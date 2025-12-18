@@ -14,7 +14,10 @@ const envSchema = z.object({
   FEED_TITLE: z.string().default('Stadt Karlsruhe - Aktuelle Meldungen'),
   FEED_DESCRIPTION: z.string().default('Offizielle Nachrichten der Stadt Karlsruhe'),
   FEED_LANGUAGE: z.string().default('de'),
-  FEED_URL: z.string().url().optional(),
+  FEED_URL: z
+    .string()
+    .url()
+    .default('https://maxliesegang.github.io/stadt-karlsruhe-syndication/feed.atom'),
   GITHUB_USERNAME: z.string().optional(),
 
   // Output configuration

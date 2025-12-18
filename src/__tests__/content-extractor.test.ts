@@ -39,6 +39,8 @@ describe('ContentExtractorService', () => {
       byline: null,
       dir: null,
       siteName: null,
+      lang: null,
+      publishedTime: null,
     });
 
     const result = extractor.extract('<html><body>fallback</body></html>', 'https://example.com');

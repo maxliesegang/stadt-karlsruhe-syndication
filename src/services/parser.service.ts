@@ -1,4 +1,5 @@
 import * as cheerio from 'cheerio';
+import type { AnyNode } from 'domhandler';
 import { createHash } from 'node:crypto';
 import type { ArticlePreview } from '../schemas/article.js';
 import { logger } from '../lib/logger.js';
@@ -87,6 +88,10 @@ export class ParserService {
   }
 
   parseArticles(html: string): ArticlePreview[] {
+    if (!html?.trim()) {
+      throw new ParseError('Empty HTML provided to parseArticles');
+    }
+
     try {
       const $ = cheerio.load(html);
       const elements = this.findArticleElements($);
@@ -96,18 +101,29 @@ export class ParserService {
         try {
           const $el = $(element);
           const title = this.extractText($el, TITLE_SELECTORS);
-          if (!title) return;
+          if (!title) {
+            logger.debug('Skipping article element: no title found');
+            return;
+          }
 
-          const link = this.normalizeLink($el.find('a').first().attr('href') || '');
+          const rawLink = $el.find('a').first().attr('href') || '';
+          const link = this.normalizeLink(rawLink);
+
+          // Skip articles without valid links
+          if (!this.isValidUrl(link)) {
+            logger.debug({ title }, 'Skipping article: invalid or missing link');
+            return;
+          }
+
           const description = this.extractDescription($el, title);
           const dateText = this.extractDateText($el);
           const date = this.parseGermanDate(dateText);
 
           articles.push({
-            title,
+            title: title.trim(),
             date,
             link,
-            description,
+            description: description.trim(),
           });
         } catch (error) {
           // Continue parsing other articles; individual failures should not abort the run
@@ -190,32 +206,45 @@ export class ParserService {
   }
 
   private extractText(
-    element: cheerio.Cheerio<cheerio.AnyNode>,
+    element: cheerio.Cheerio<AnyNode>,
     selectors: string[],
     fallback = ''
   ): string {
     for (const selector of selectors) {
       const text = element.find(selector).first().text().trim();
-      if (text) return text;
+      if (text) return this.decodeHtmlEntities(text);
     }
     return fallback.trim();
   }
 
-  private extractDescription(element: cheerio.Cheerio<cheerio.AnyNode>, fallback: string): string {
+  private decodeHtmlEntities(text: string): string {
+    // Cheerio's .text() already decodes most entities, but handle edge cases
+    return text
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&shy;/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  private extractDescription(element: cheerio.Cheerio<AnyNode>, fallback: string): string {
     const description = this.extractText(element, DESCRIPTION_SELECTORS);
     if (description) return description;
 
-    const firstParagraph = element
-      .find('p')
-      .filter((_, el) => !element.find(el).hasClass('news-item__date'))
-      .first()
-      .text()
-      .trim();
+    // Find first paragraph that doesn't have date-related classes
+    const paragraphs = element.find('p');
+    for (let i = 0; i < paragraphs.length; i++) {
+      const p = paragraphs.eq(i);
+      const classList = p.attr('class') || '';
+      if (!classList.includes('date') && !classList.includes('published')) {
+        const text = p.text().trim();
+        if (text) return text;
+      }
+    }
 
-    return firstParagraph || fallback;
+    return fallback;
   }
 
-  private extractDateText(element: cheerio.Cheerio<cheerio.AnyNode>): string {
+  private extractDateText(element: cheerio.Cheerio<AnyNode>): string {
     const timeElement = element.find('time[datetime]').first();
     const dateAttr = timeElement.attr('datetime');
     if (dateAttr) {
@@ -231,13 +260,23 @@ export class ParserService {
   }
 
   private normalizeLink(link: string): string {
-    if (!link) return env.SOURCE_URL;
+    if (!link) return '';
     if (link.startsWith('/')) return new URL(link, env.BASE_URL).href;
     if (!link.startsWith('http')) return new URL(link, env.SOURCE_URL).href;
     return link;
   }
 
-  private findArticleElements($: cheerio.CheerioAPI): cheerio.Cheerio<cheerio.AnyNode> {
+  private isValidUrl(url: string): boolean {
+    if (!url) return false;
+    try {
+      new URL(url);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  private findArticleElements($: cheerio.CheerioAPI): cheerio.Cheerio<AnyNode> {
     for (const selector of ARTICLE_SELECTORS) {
       const found = $(selector);
       if (found.length > 0) {

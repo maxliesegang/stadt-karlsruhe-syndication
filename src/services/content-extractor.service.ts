@@ -4,24 +4,29 @@ import { JSDOM } from 'jsdom';
 import { ParseError } from '../lib/errors.js';
 import { logger } from '../lib/logger.js';
 
-const STRIP_SELECTORS = ['script', 'style', 'nav', 'iframe', 'noscript'];
+const STRIP_SELECTORS = ['script', 'style', 'nav', 'iframe', 'noscript', 'footer', 'header'];
 const PREFERRED_CONTAINERS = ['article', 'main', '.news', '.content', 'body'];
+const MIN_CONTENT_LENGTH = 20; // Minimum characters for valid content
 
 export class ContentExtractorService {
   extract(html: string, url: string): string {
+    if (!html?.trim()) {
+      throw new ParseError('Empty HTML provided');
+    }
+
     const readable = this.extractWithReadability(html, url);
-    if (readable) {
+    if (readable && this.isValidContent(readable)) {
       return readable;
     }
 
     logger.warn({ url }, 'Readability failed, using fallback extraction');
 
     const fallback = this.extractFallbackHtml(html);
-    if (fallback) {
+    if (fallback && this.isValidContent(fallback)) {
       return fallback;
     }
 
-    throw new ParseError('Could not extract any content from detail page');
+    throw new ParseError('Could not extract any meaningful content from detail page');
   }
 
   private extractWithReadability(html: string, url: string): string | null {
@@ -111,21 +116,46 @@ export class ContentExtractorService {
   }
 
   private sanitizeHtml(content: string): string {
-    const $ = cheerio.load(content);
+    if (!content?.trim()) return '';
+
+    // Load with fragment mode to avoid wrapping in html/body tags
+    const $ = cheerio.load(content, null, false);
+
+    // Remove unwanted elements
     STRIP_SELECTORS.forEach((selector) => $(selector).remove());
-    $('[onload],[onclick],[onerror],[style]').each((_, el) => {
-      const attribs = el.attribs;
-      Object.keys(attribs).forEach((attr) => {
+
+    // Remove inline event handlers and styles
+    $('*').each((_, el) => {
+      if (!('attribs' in el) || !el.attribs) return;
+
+      Object.keys(el.attribs).forEach((attr) => {
         if (attr.startsWith('on') || attr === 'style') {
-          delete attribs[attr];
+          delete el.attribs[attr];
         }
       });
     });
 
-    const bodyHtml = $('body').html();
-    if (bodyHtml) return bodyHtml.trim();
+    // Remove empty paragraphs and excessive whitespace
+    $('p').each((_, el) => {
+      const $el = $(el);
+      const text = $el.text().trim();
+      if (!text) {
+        $el.remove();
+      }
+    });
 
-    return $.root().html()?.trim() || '';
+    return $.html().trim();
+  }
+
+  private isValidContent(content: string): boolean {
+    if (!content) return false;
+
+    // Strip HTML tags to get plain text for length check
+    const $ = cheerio.load(content);
+    const textContent = $.text().trim();
+
+    // Must have minimum length and contain meaningful text (not just whitespace/special chars)
+    return textContent.length >= MIN_CONTENT_LENGTH && /\w{3,}/.test(textContent);
   }
 }
 
