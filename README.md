@@ -2,20 +2,19 @@
 
 Automated Atom feed generator for [Stadt Karlsruhe news](https://www.karlsruhe.de/aktuelles).
 
-Built with modern TypeScript, service-oriented architecture, and production-ready practices.
+A simple, maintainable TypeScript scraper in a single file.
 
 ## Features
 
 - 🔄 Scrapes karlsruhe.de/aktuelles for latest news
-- 📰 Generates valid Atom feed with full content
+- 📰 Generates valid Atom feed with full article content
+- 🎯 Uses @mozilla/readability for intelligent content extraction
 - 🔍 Tracks article changes with MD5 hashing
 - ⏰ Auto-updates every 4 hours via GitHub Actions
 - 🚀 Deploys to GitHub Pages
-- ✅ Runtime validation with Zod
-- 📊 Structured logging with Pino
-- 🧪 Test coverage with Vitest
 - 🔧 Environment-based configuration
-- 🎯 Service-oriented architecture
+- 📦 Simple single-file architecture
+- 🪶 Lightweight with minimal dependencies
 
 ## Setup
 
@@ -130,48 +129,50 @@ npm run typecheck
 
 All configuration is managed through environment variables:
 
-| Variable          | Default                              | Description                                     |
-| ----------------- | ------------------------------------ | ----------------------------------------------- |
-| `SOURCE_URL`      | `https://www.karlsruhe.de/aktuelles` | News source URL                                 |
-| `GITHUB_USERNAME` | -                                    | Your GitHub username (used to build `FEED_URL`) |
-| `FEED_URL`        | Derived from `GITHUB_USERNAME`       | Custom feed URL (required if username missing)  |
-| `MAX_ARTICLES`    | `100`                                | Maximum articles in feed                        |
-| `LOG_LEVEL`       | `info`                               | Logging level (trace, debug, info, warn, error) |
-| `NODE_ENV`        | `production`                         | Environment (development, production, test)     |
+| Variable          | Default                              | Description               |
+| ----------------- | ------------------------------------ | ------------------------- |
+| `SOURCE_URL`      | `https://www.karlsruhe.de/aktuelles` | News source URL           |
+| `GITHUB_USERNAME` | -                                    | Your GitHub username      |
+| `FEED_URL`        | Auto-generated                       | Published feed URL        |
+| `MAX_ARTICLES`    | `100`                                | Maximum articles in feed  |
+| `OUTPUT_FILE`     | `docs/feed.atom`                     | Feed output path          |
+| `TRACKING_FILE`   | `data/tracking.json`                 | Change tracking file path |
 
 See [.env.example](.env.example) for all options.
 
 ## How It Works
 
+### Content Extraction
+
+The scraper uses @mozilla/readability (from Firefox Reader View) as the primary method to extract article content, with cheerio as a fallback. This ensures clean, readable content without ads, navigation, or other page clutter.
+
 ### ID Generation
 
-Articles are identified using a stable ID format:
+Articles are identified using MD5 hashes of their content and date:
 
 ```
-YYYY-MM-DD_slugified-title
+md5(content + date) → "e26cb58274098ee7c9bca9d45b2bba8e"
 ```
-
-Example: `2025-12-09_neue-stadtbahn-linie-geplant`
 
 This ensures:
 
-- No duplicate entries
-- Articles remain stable across updates
-- German characters are properly handled (ä→a, ö→o, ü→u, ß→ss)
+- Content changes result in new IDs (treated as new articles)
+- Stable IDs for unchanged content
+- No duplicate entries in the feed
 
 ### Change Detection
 
-The system tracks article content using MD5 hashing:
+The system tracks articles using MD5 hashing:
 
-1. New articles → Added to feed
-2. Content changes → Entry updated in feed
-3. No changes → Last-seen timestamp updated
+1. **New articles** → Added to feed
+2. **Content changes** → New ID generated, treated as new article
+3. **No changes** → Last-seen timestamp updated
 
 Tracking data is persisted in `data/tracking.json` and committed to git.
 
 ### Feed Limits
 
-- Maximum 100 articles in feed (configurable in `src/config.ts`)
+- Maximum 100 articles in feed (configurable via `MAX_ARTICLES`)
 - Articles sorted by date (newest first)
 
 ## Architecture
@@ -181,65 +182,60 @@ Tracking data is persisted in `data/tracking.json` and committed to git.
 ```
 stadt-karlsruhe-syndication/
 ├── src/
-│   ├── index.ts              # Main entry point
-│   ├── lib/                  # Shared utilities
-│   │   ├── env.ts           # Environment config (Zod validated)
-│   │   ├── logger.ts        # Pino logger instance
-│   │   └── errors.ts        # Custom error classes
-│   ├── services/            # Business logic (service layer)
-│   │   ├── scraper.service.ts    # HTTP fetching with retry
-│   │   ├── parser.service.ts     # HTML parsing & date handling
-│   │   ├── tracking.service.ts   # Change detection
-│   │   └── feed.service.ts       # Atom feed generation
-│   ├── schemas/             # Zod validation schemas
-│   │   └── article.ts       # Article & tracking data schemas
-│   └── __tests__/           # Test files
-│       └── parser.test.ts
+│   └── index.ts              # Single file - all logic here (~600 lines)
 ├── .github/workflows/
 │   └── update-feed.yml      # GitHub Actions (runs every 4 hours)
 ├── docs/
-│   └── feed.atom            # Generated feed (GitHub Pages)
+│   ├── feed.atom            # Generated feed (GitHub Pages)
+│   └── index.html           # Landing page
 ├── data/
 │   └── tracking.json        # Article tracking (committed to git)
 ├── .env.example             # Environment template
-├── vitest.config.ts         # Test configuration
 ├── package.json
 ├── tsconfig.json
 ├── README.md
 └── AGENTS.md                # Guide for AI agents
 ```
 
-### Service Layer
+### Code Structure
 
-Each service is focused on a single responsibility:
+The `src/index.ts` file is organized into clear sections:
 
-- **ScraperService** - Fetches HTML with retry logic and timeout
-- **ParserService** - Extracts articles from HTML, handles German dates
-- **TrackingService** - Detects new/updated articles via MD5 hashing
-- **FeedService** - Generates Atom feed from articles
+1. **Configuration** - Environment variables, CSS selectors, constants
+2. **Types** - TypeScript type definitions
+3. **HTTP & Scraping** - Fetch HTML with retry logic
+4. **Date Parsing** - Handle German date formats
+5. **URL Normalization** - Convert relative links to absolute
+6. **HTML Sanitization** - Clean extracted HTML
+7. **Content Extraction** - @mozilla/readability + cheerio fallback
+8. **ID Generation** - MD5 hashing
+9. **Parsing** - Extract articles from listing page
+10. **Tracking** - Load/save/detect changes
+11. **Feed Generation** - Create Atom XML
+12. **Main** - Linear pipeline execution
 
 ### Tech Stack
 
 **Core:**
 
-- **TypeScript** - Strict mode, type-safe development
+- **TypeScript** - Type-safe development
 - **Node.js** - Runtime (ES2022 modules)
 
 **Libraries:**
 
-- **Zod** - Runtime schema validation
-- **Pino** - High-performance structured logging
+- **@mozilla/readability** - Intelligent content extraction (Firefox Reader View)
 - **cheerio** - Fast HTML parsing (jQuery-like API)
+- **jsdom** - DOM implementation for Readability
 - **feed** - Atom/RSS feed generation
 - **ofetch** - Modern fetch wrapper with retry
-- **slugify** - URL-safe ID generation
 - **dotenv** - Environment variable management
 
 **Development:**
 
-- **Vitest** - Fast unit testing framework
 - **tsx** - TypeScript execution
 - **TypeScript** - Type checking
+- **ESLint** - Code linting
+- **Prettier** - Code formatting
 
 **Deployment:**
 
@@ -252,10 +248,10 @@ Each service is focused on a single responsibility:
 
 If the scraper returns 0 articles:
 
-1. Enable debug logging: `LOG_LEVEL=debug npm run start`
-2. The website HTML structure may have changed
-3. Inspect karlsruhe.de/aktuelles in browser DevTools
-4. Update selectors in [src/services/parser.service.ts](src/services/parser.service.ts)
+1. The website HTML structure may have changed
+2. Inspect karlsruhe.de/aktuelles in browser DevTools
+3. Update selectors in `CONFIG.SELECTORS.articles` in [src/index.ts](src/index.ts:50-63)
+4. Run locally to see detailed console output
 
 ### Feed not updating
 
@@ -268,54 +264,39 @@ If the scraper returns 0 articles:
 
 If dates aren't parsed correctly:
 
-1. Check logs for warnings about unparsed dates
-2. Add new patterns to `parseGermanDate()` in [src/services/parser.service.ts](src/services/parser.service.ts)
-3. Add test cases in [src/**tests**/parser.test.ts](src/__tests__/parser.test.ts)
+1. Check console output for warnings about unparsed dates
+2. Add new patterns to `parseGermanDate()` in [src/index.ts](src/index.ts:136-195)
+3. Test with actual website data
 
-### Environment validation errors
+### Content extraction issues
 
-If you see "Invalid environment configuration":
+If articles have missing or incorrect content:
 
-1. Check your `.env` file against [.env.example](.env.example)
-2. Ensure required variables are set
-3. Verify URLs are valid
-
-### Debug mode
-
-Run with detailed logging:
-
-```bash
-LOG_LEVEL=debug npm run start
-```
-
-Or set in `.env`:
-
-```bash
-LOG_LEVEL=debug
-NODE_ENV=development
-```
+1. Check if @mozilla/readability is extracting properly (console logs show method used)
+2. Update cheerio fallback selectors in `extractContent()` if needed
+3. Adjust sanitization rules in `sanitizeHtml()` if content is being removed
 
 ## Contributing
 
 ### For Developers
 
-See standard development practices in the codebase. Key points:
+The codebase is intentionally simple and consolidated into a single file for easy maintenance:
 
-- Write tests for new features
-- Use structured logging (Pino)
-- Validate data with Zod schemas
-- Follow the service-oriented architecture
-- Keep services focused and testable
+- Everything is in [src/index.ts](src/index.ts:1) - one file, linear flow
+- Clear section comments guide you to each part
+- Functions are self-contained and easy to modify
+- No complex abstractions or class hierarchies
+- Changes to selectors, parsing logic, or extraction are straightforward
 
 ### For AI Agents
 
 See [AGENTS.md](AGENTS.md) for comprehensive guidance on:
 
 - Project architecture and patterns
-- Common tasks and modifications
+- Common tasks and modifications (updating selectors, date parsing, etc.)
 - Best practices for code changes
 - Debugging strategies
-- File references and critical paths
+- Understanding the simplified structure
 
 ## License
 
