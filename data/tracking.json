@@ -351,7 +351,7 @@
   },
   "bb530e8dd0862fc6a18eaba1e3f6a20e": {
     "contentHash": "bb530e8dd0862fc6a18eaba1e3f6a20e",
-    "lastSeen": "2025-12-22T08:37:13.928Z",
+    "lastSeen": "2025-12-22T12:53:57.642Z",
     "link": "https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/vhs-karlsruhe-erhaelt-mehr-zuschuesse"
   },
   "e4e97ec4a8df918fd8e14dfc08eedfe8": {
@@ -386,17 +386,17 @@
   },
   "fcfd4ca5e7005509a062a3da47b45363": {
     "contentHash": "fcfd4ca5e7005509a062a3da47b45363",
-    "lastSeen": "2025-12-22T08:37:13.928Z",
+    "lastSeen": "2025-12-22T12:53:57.642Z",
     "link": "https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/eine-botschafterin-der-stadt-geht-in-ruhestand"
   },
   "20431ab79afba8fbd375177e1b909506": {
     "contentHash": "20431ab79afba8fbd375177e1b909506",
-    "lastSeen": "2025-12-22T08:37:13.928Z",
+    "lastSeen": "2025-12-22T12:53:57.642Z",
     "link": "https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/default-76fab06a27d1387f208e3ce893ed1267"
   },
   "26c409f70b02ec1390371094ee93011c": {
     "contentHash": "26c409f70b02ec1390371094ee93011c",
-    "lastSeen": "2025-12-22T08:37:13.928Z",
+    "lastSeen": "2025-12-22T12:53:57.642Z",
     "link": "https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/grussbotschaft-von-oberbuergermeister-dr-frank-mentrup-zu-weihnachten-2025"
   },
   "af7e92e243efd582099eafe700e6149b": {
@@ -496,12 +496,27 @@
   },
   "ea9541e6fbb8a7d66a399948b942bc91": {
     "contentHash": "ea9541e6fbb8a7d66a399948b942bc91",
-    "lastSeen": "2025-12-22T08:37:13.928Z",
+    "lastSeen": "2025-12-22T12:53:57.642Z",
     "link": "https://www.youtube.com/watch?v=M_QN0ENPhAM"
   },
   "d525146012d27bbac3aa7ca7dd0a4c8c": {
     "contentHash": "d525146012d27bbac3aa7ca7dd0a4c8c",
-    "lastSeen": "2025-12-22T08:37:13.928Z",
+    "lastSeen": "2025-12-22T12:53:57.642Z",
     "link": "https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/muellabfuhr-und-oeffnungszeiten-der-entsorgungseinrichtungen-zu-heilige-drei-koenige"
+  },
+  "83856de221c78c661f9277fa2be2af84": {
+    "contentHash": "83856de221c78c661f9277fa2be2af84",
+    "lastSeen": "2025-12-22T12:53:57.642Z",
+    "link": "https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/keine-pause-fuer-das-rappele"
+  },
+  "523e95351d5dcde570d5b12c939d8e20": {
+    "contentHash": "523e95351d5dcde570d5b12c939d8e20",
+    "lastSeen": "2025-12-22T12:53:57.642Z",
+    "link": "https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/ruhebank-fuer-skulpturenpark"
+  },
+  "0c5774b3d1fd1c4de5cbbc2f07a9b616": {
+    "contentHash": "0c5774b3d1fd1c4de5cbbc2f07a9b616",
+    "lastSeen": "2025-12-22T12:53:57.642Z",
+    "link": "https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/bilder-erzaehlen-geschichten"
   }
 }
