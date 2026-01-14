@@ -7,6 +7,10 @@ on:
   push:
     branches: [main] # Run on push for testing
 
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
