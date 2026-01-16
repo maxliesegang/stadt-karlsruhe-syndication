@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.karlsruhe.de/aktuelles</id>
     <title>Stadt Karlsruhe - Aktuelle Meldungen</title>
-    <updated>2026-01-16T12:56:15.640Z</updated>
+    <updated>2026-01-16T16:36:29.675Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.karlsruhe.de/aktuelles"/>
     <link rel="self" href="https://maxliesegang.github.io/stadt-karlsruhe-syndication/feed.atom"/>
@@ -10,7 +10,7 @@
     <rights>Stadt Karlsruhe 2026</rights>
     <entry>
         <title type="html"><![CDATA[TSK führt Wahlmöglichkeit zwischen Voll- und Teilservice ein]]></title>
-        <id>05a8cbdb347e0eb592f444c5907cb26a</id>
+        <id>32aee2ca4d3cc8fc0bab5b2f1c024cf7</id>
         <link href="https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/tsk-fuehrt-wahlmoeglichkeit-zwischen-voll-und-teilservice-ein"/>
         <updated>2026-01-16T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Bei Restmüll, Papier/Pappe und Bioabfall können die Bürgerinnen und Bürger sich für eine Servicestufe entscheiden.]]></summary>
@@ -29,7 +29,7 @@
                         <div>
 
                                 <p><time itemprop="datePublished" datetime="2026-01-16">
-                                        gerade eben
+                                        vor 3 Stunden
                                     </time>
                                 </p>
 
