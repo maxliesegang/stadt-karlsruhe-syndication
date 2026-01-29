@@ -2,12 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.karlsruhe.de/aktuelles</id>
     <title>Stadt Karlsruhe - Aktuelle Meldungen</title>
-    <updated>2026-01-29T13:09:08.521Z</updated>
+    <updated>2026-01-29T16:51:15.707Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.karlsruhe.de/aktuelles"/>
     <link rel="self" href="https://maxliesegang.github.io/stadt-karlsruhe-syndication/feed.atom"/>
     <subtitle>Offizielle Nachrichten der Stadt Karlsruhe</subtitle>
     <rights>Stadt Karlsruhe 2026</rights>
+    <entry>
+        <title type="html"><![CDATA[Kindern ein Zuhause auf Zeit geschenkt]]></title>
+        <id>6f6410b04888371d21c6d60062aa0f02</id>
+        <link href="https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/kindern-ein-zuhause-auf-zeit-geschenkt"/>
+        <updated>2026-01-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Die Karlsruherin Kerstin Fischer wurde Ende Januar im Haus Solms feierlich mit dem Bundesverdienstkreuz ausgezeichnet. Landesminister Peter Hauk (CDU) und Oberbürgermeister Dr. Frank Mentrup würdigten das große Engagement der 65-Jährigen.]]></summary>
+        <content type="html"><![CDATA[<div id="readability-page-1" class="page"><div itemprop="articleBody">
+                                        <p>Sie hat Kindern Hoffnung geschenkt, Vertrauen geweckt und Chancen geschaffen: Die Karlsruherin Kerstin Fischer wurde Ende Januar im Haus Solms feierlich mit dem Bundesverdienstkreuz ausgezeichnet. Landesminister Peter Hauk (CDU) und Oberbürgermeister Dr. Frank Mentrup würdigten das große Engagement der 65-Jährigen, die insgesamt 15 Jahre als Mutter in der Bereitschaftspflege aktiv war.</p>
+<p>Kerstin Fischer nahm die Auszeichnung im Kreise ihrer Familie entgegen, der sie ausdrücklich für die Unterstützung und Geduld in dieser Zeit dankte. Insgesamt 46 Kindern in Notsituationen schenkte sie zwischen 2001 und 2015 vorübergehend ein Zuhause – für einen Zeitraum von wenigen Tagen bis hin zu Monaten oder Jahren. Als Bereitschaftspflegefamilie kümmerte sie sich nicht nur rund um die Uhr um ihre Schützlinge, sondern arbeitete auch eng mit dem Jugendamt zusammen und hielt den Kontakt zu den leiblichen Eltern der Kinder. All das stemmte sie zusätzlich zur Erziehung der eigenen drei Kinder. Die Betreuung sei geprägt gewesen von Herausforderungen und schwierigen Situationen, aber auch von Dankbarkeit und bereichernden Erfahrungen. Sie habe ihre Tätigkeit als Pflegemutter nie als etwas Außergewöhnliches empfunden, sondern es „einfach gemacht“, berichtete Fischer. Zwei Pflegekinder hat die Familie adoptiert. Und auch ihr „erstes“ Pflegekind, das schwerbehindert zur Welt kam und heute Mitte zwanzig ist, gehört noch immer wie selbstverständlich zur Familie. „Ein starkes Zeichen dafür, dass Verantwortung nicht endet, sondern bleibt“, so der OB.</p>
+<p>Minister Peter Hauk bezeichnete Kerstin Fischers Engagement als „großartigen Akt der Mitmenschlichkeit“, das Verdienstkreuz am Bande sei die höchste Auszeichnung, die der Staat hierfür vergeben könne. -jd-</p>
+                                    </div></div>]]></content>
+        <published>2026-01-29T00:00:00.000Z</published>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Forum des Gemeindepsychiatrischen Verbundes Karlsruhe]]></title>
         <id>d9195cf2dc386e7d7c4337d4cde3babc</id>
@@ -342,23 +355,6 @@
 <p>Oberbürgermeister Dr. Frank Mentrup sprach als KVV-Aufsichtsratsvorsitzender von einem „großen Vertrauensbeweis in der Region“, der den Zusammenschluss ermöglicht habe. Er sei „stolz wie Bolle“, dass sich das VPE-Gebiet Karlsruhe und nicht Stuttgart zugewandt habe, bekannte Mentrup. Weil das Deutschland-Ticket inzwischen rund 85 Prozent der Einnahmen ausmacht, sind die voraussichtlich bis Ende des Jahres umgesetzten Auswirkungen auf die Tarifstruktur weniger gravierend.</p>
 <p>Dafür kümmerten sich Verbünde verstärkt um Aspekte, so der OB, „die neben der klassischen Bahn und dem klassischen Bus eine Rolle spielen“. Hierzu zählte er beispielsweise die „Regio-Move“-App, das Fahrradverleihsystem „Nextbike“ oder das Projekt ­„CiCoBW“ für Ticket Check in und Check out. Zudem könne „man über den einen oder anderen Schritt nachdenken“, wie verstärkte Zusammenarbeit in der TechnologieRegion oder bei Hochschulen.</p>
 <p>„Wir haben die richtige Entscheidung getroffen“, zeigte sich Pforzheims Oberbürgermeister Peter Boch überzeugt, „das ist für unsere Bürgerinnen und Bürger ein absoluter Mehrwert“. Bastian Rosenau, Landrat des Enzkreises, betonte, dass „wir über Grenzen hinaus denken müssen“. Daher sollen die guten Kontakte mit dem Verkehrsverbund Stuttgart weiter ausgebaut werden, um dem östlichen Kreisgebiet attraktive Angebote zu ermöglichen. -eck-</p>
-                                    </div></div>]]></content>
-        <published>2026-01-27T00:00:00.000Z</published>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Kreative Wissenschaft auf der großen Bühne]]></title>
-        <id>f9226a2740330a50c3f83bf3b69826dd</id>
-        <link href="https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/kreative-wissenschaft-auf-der-grossen-buehne-1"/>
-        <updated>2026-01-27T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Im Mai 2026 geht FameLab, eines der bekanntesten Wissenschaftsformate Deutschlands, wieder in Karlsruhe über die Bühne. Die Anmeldung ist ab sofort bis zum 15. April 2026 möglich.]]></summary>
-        <content type="html"><![CDATA[<div id="readability-page-1" class="page"><div itemprop="articleBody">
-                                        <p>Im Mai 2026 geht FameLab, eines der bekanntesten Wissenschaftsformate Deutschlands, wieder in Karlsruhe über die Bühne. In nur drei Minuten müssen die Kandidatinnen und Kandidaten die Jury und das Publikum mit ihrer Forschung begeistern – unterhaltsam, kreativ und verständlich. FameLab steht für Sichtbarkeit, Austausch und die Freude daran, Wissenschaft lebendig zu vermitteln.</p>
-<p><strong>Jetzt anmelden und mitmachen bei FameLab</strong></p>
-<p>Teilnehmen können Studierende und Wissenschaftlerinnen und Wissenschaftler ab 21 Jahren aus den Bereichen Natur-, Sozialwissenschaften, Technik oder Medizin. <strong>Die Anmeldung ist ab sofort bis zum 15. April 2026 unter <a href="http://www.famelab-ka.de/" title="Link zur Seite" target="_blank" rel="noreferrer">www.famelab-ka.de</a> möglich.</strong></p>
-<p>Die besten Wissenschaftskommunikatorinnen und -kommunikatoren in Baden-Württemberg, Rheinland-Pfalz, Hessen und im Saarland werden dann beim <strong>südwestdeutschen Vorentscheid </strong>am <strong>Freitag, 8. Mai 2026</strong> um 19 Uhr im Kulturzentrum Tollhaus in Karlsruhe gekürt.</p>
-<p>Wer bei FameLab mitmacht, bringt nicht nur sein Forschungsthema auf die Bühne, sondern entwickelt sich auch persönlich und professionell weiter: Die Teilnehmenden gewinnen öffentliche Aufmerksamkeit für ihre Forschung, sammeln wertvolle Erfahrungen in der Wissenschaftskommunikation, trainieren ihr Auftreten vor Publikum und knüpfen spannende Kontakte zu einer engagierten Community aus ganz Deutschland – und das alles mit jeder Menge Spaß.</p>
-<p>Ein zusätzlicher Anreiz: Die Gewinnerinnen und Gewinner erhalten ein Preisgeld sowie ein professionelles Medien- und Präsentationstraining und qualifizieren sich für das Deutschlandfinale am 1. Juli 2026. Wer sich dort durchsetzt, vertritt Deutschland beim internationalen Finale von FameLab.</p>
-<p>Die Organisation der Veranstaltung übernimmt das Wissenschaftsbüro der Wirtschaftsförderung der Stadt Karlsruhe. Unterstützt wird FameLab durch das Karlsruher Institut für Technologie (KIT), das Nationale Institut für Wissenschaftskommunikation (NaWik), das FZI Forschungszentrum Informatik, die Atruvia AG, die X2E GmbH sowie das Kulturzentrum Tollhaus.</p>
                                     </div></div>]]></content>
         <published>2026-01-27T00:00:00.000Z</published>
     </entry>
