@@ -2,12 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.karlsruhe.de/aktuelles</id>
     <title>Stadt Karlsruhe - Aktuelle Meldungen</title>
-    <updated>2026-02-09T13:21:18.662Z</updated>
+    <updated>2026-02-09T20:48:57.338Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.karlsruhe.de/aktuelles"/>
     <link rel="self" href="https://maxliesegang.github.io/stadt-karlsruhe-syndication/feed.atom"/>
     <subtitle>Offizielle Nachrichten der Stadt Karlsruhe</subtitle>
     <rights>Stadt Karlsruhe 2026</rights>
+    <entry>
+        <title type="html"><![CDATA[Ein Zeitzeuge erinnert sich]]></title>
+        <id>a58878457f9b22cda11edef8f3d19533</id>
+        <link href="https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/ein-zeitzeuge-erinnert-sich"/>
+        <updated>2026-02-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Walter Bingham überlebte den Holocaust. Der in Karlsruhe geborene 102-Jährige wirkt ungleich lebendiger, als sein Alter vermuten lässt. Beim Empfang durch Oberbürgermeister Dr. Frank Mentrup sprach er über seine Erfahrungen.]]></summary>
+        <content type="html"><![CDATA[<div id="readability-page-1" class="page"><div itemprop="articleBody">
+                                        <p>Wäre Walter Binghams Leben die Handlung eines Romans, man würde das Buch wohl erst zur Seite legen, wenn einem die Augen zufallen. So aufregend, bewegend, grausam und rührend ist es verlaufen. Walter Bingham wurde als Sohn polnischer Juden in Karlsruhe geboren und überlebte den Holocaust. Zum Tag des Gedenkens an die Opfer kehrte der 102-Jährige in seine Geburtsstadt zurück und sprach mit Oberbürgermeister Dr. Frank Mentrup über sein Leben.</p>
+<p>Nach der Machtergreifung der Nazis 1933 wurden Stück für Stück Juden und andere Minderheiten aus dem öffentlichen Leben ausgegrenzt, verfolgt und schließlich getötet. Walter Bingham, der als Wolfgang Billig in Karlsruhe aufwuchs, erlebte dies am eigenen Leib. „Ich saß in der Schule neben einem deutschen Jungen, der immer von mir abschrieb. Er bekam gute Noten und ich schlechte“, erinnert sich Bingham. Seine früheren Schulkameraden besuchten nach der Schule die Hitlerjugend und lernten dort, Juden zu hassen. „Die haben dort gesungen: Wenn das Judenblut vom Messer spritzt, geht es nochmal so gut“, erzählt Bingham. „Was glauben Sie, wie ich mich fühlte.“ Bei einer der zahlreichen sogenannten Säuberungsaktionen holten die Nazis Binghams Vater Sigmund ab. Er überlebte den Holocaust nicht. Ein Stolperstein in der Kaiserstraße erinnert an ihn.</p>
+<p>Auch Bingham stand auf der Liste der Nazis, war aber zu diesem Zeitpunkt in Mannheim. „Sonst wäre ich heute nicht hier“, ergänzt er. Im Juni 1939, kurz vor dem Ausbruch des Zweiten Weltkriegs, hat Bingham ein weiteres Mal Glück. Er kommt mit einem Kindertransport nach England. „Ich war fünfzehneinhalb und habe schon verstanden, was passiert, aber da waren Drei- und Vierjährige, die dachten, sie würden bestraft“, beschreibt Bingham die Szenen am Bahnsteig. Ein anderer Überlebender des Transports erzählte Bingham, wie er als Kind mit 17 Monaten im Kinderwagen zum Bahnsteig gebracht wurde und die Eltern nach der Übergabe den leeren Kinderwagen nach Hause schoben - „traumatisch“, so Bingham.</p>
+<p>Als er alt genug war, trat Bingham in die englische Armee ein und wurde zunächst Fahrer. „Ich brauchte einen neuen Namen“, erzählt Bingham. Wenn er als deutscher Jude in Gefangenschaft der Nazis geraten wäre, hätte dies seinen Tod bedeutet. Sein Vorgesetzter gab ihm zur Namensfindung einen halben Tag frei. „Ich bin zur Telefonzelle im Ort gegangen und habe mir einen Namen ausgesucht“, erzählt er. Seine Initialen wollte er behalten und so wurde aus Wolfgang Billig Walter Bingham. Beim D-Day, dem Tag der Landung der Alliierten in der Normandie, war Bingham dabei. Stück für Stück kämpfte er sich voran. Kurz vor der Schlacht um Arnheim wurde er schließlich nach London zurückgerufen.</p>
+<p>Mit seinen Deutschkenntnissen war er wertvoll für den englischen Geheimdienst und wurde dort ausgebildet. In Hamburg kam er schließlich zum Einsatz. „Ich hatte ein eigenes Büro im ehemaligen Gebäude der Gauleitung von Hamburg.“ Für Verhöre wurden ihm deutsche Gefangene zugeführt. Einer von ihnen war Joachim von Ribbentrop, Reichsminister des Auswärtigen unter den Nazis und später in den Nürnberger Prozessen zum Tode verurteilt. Bis heute ist Bingham fassungslos über dessen Auftreten. „Ich habe ihn gefragt, was er über die Endlösung erzählen kann, und er meinte, er wisse davon nichts, dies sei alleine der Führer gewesen“, berichtet Bingham.</p>
+<p>Dennoch gab es auch emotional schöne Momente in dieser Zeit. Seine Mutter hatte den Krieg und mehrere Lager überlebt und konnte schließlich nach Schweden fliehen. Nach sieben Jahren der Trennung trafen sich Mutter und Sohn in Kopenhagen zum ersten Mal wieder. Auch wenn Bingham von den Erlebnissen seiner Kindheit und der Verfolgung geprägt wurde, hat er doch das Leben auch genossen: „Ich habe einen Pilotenschein gemacht und bin sogar einmal von England bis nach Israel geflogen“, erzählt er.</p>
+<p>Nach dem Tod seiner Frau wanderte Bingham nach Israel aus, wo er seit 2004 lebt. Bis heute arbeitet er als Journalist fürs Radio und die Zeitung. „Mittlerweile mache ich ein bisschen weniger“, sagt er mit einem Lächeln. -ds-</p>
+                                    </div></div>]]></content>
+        <published>2026-02-09T00:00:00.000Z</published>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Sperrmüll-Anmeldung wird schneller und einfacher]]></title>
         <id>eafc29afb8999719ac65935932c69194</id>
@@ -135,6 +152,23 @@
         <published>2026-02-09T00:00:00.000Z</published>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Ein Zeitzeuge erinnert sich]]></title>
+        <id>87f0ba82b3327475dccde307beea5052</id>
+        <link href="https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/ein-zeitzeuge-erinnert-sich"/>
+        <updated>2026-02-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Zum Tag des Gedenkens an die Opfer kehrte der 102-Jährige Walter Bingham in seine Geburtsstadt Karlsruhe zurück und sprach mit Oberbürgermeister Dr. Frank Mentrup über sein Leben.]]></summary>
+        <content type="html"><![CDATA[<div id="readability-page-1" class="page"><div itemprop="articleBody">
+                                        <p>Wäre Walter Binghams Leben die Handlung eines Romans, man würde das Buch wohl erst zur Seite legen, wenn einem die Augen zufallen. So aufregend, bewegend, grausam und rührend ist es verlaufen. Walter Bingham wurde als Sohn polnischer Juden in Karlsruhe geboren und überlebte den Holocaust. Zum Tag des Gedenkens an die Opfer kehrte der 102-Jährige in seine Geburtsstadt zurück und sprach mit Oberbürgermeister Dr. Frank Mentrup über sein Leben.</p>
+<p>Nach der Machtergreifung der Nazis 1933 wurden Stück für Stück Juden und andere Minderheiten aus dem öffentlichen Leben ausgegrenzt, verfolgt und schließlich getötet. Walter Bingham, der als Wolfgang Billig in Karlsruhe aufwuchs, erlebte dies am eigenen Leib. „Ich saß in der Schule neben einem deutschen Jungen, der immer von mir abschrieb. Er bekam gute Noten und ich schlechte“, erinnert sich Bingham. Seine früheren Schulkameraden besuchten nach der Schule die Hitlerjugend und lernten dort, Juden zu hassen. „Die haben dort gesungen: Wenn das Judenblut vom Messer spritzt, geht es nochmal so gut“, erzählt Bingham. „Was glauben Sie, wie ich mich fühlte.“ Bei einer der zahlreichen sogenannten Säuberungsaktionen holten die Nazis Binghams Vater Sigmund ab. Er überlebte den Holocaust nicht. Ein Stolperstein in der Kaiserstraße erinnert an ihn.</p>
+<p>Auch Bingham stand auf der Liste der Nazis, war aber zu diesem Zeitpunkt in Mannheim. „Sonst wäre ich heute nicht hier“, ergänzt er. Im Juni 1939, kurz vor dem Ausbruch des Zweiten Weltkriegs, hat Bingham ein weiteres Mal Glück. Er kommt mit einem Kindertransport nach England. „Ich war fünfzehneinhalb und habe schon verstanden, was passiert, aber da waren Drei- und Vierjährige, die dachten, sie würden bestraft“, beschreibt Bingham die Szenen am Bahnsteig. Ein anderer Überlebender des Transports erzählte Bingham, wie er als Kind mit 17 Monaten im Kinderwagen zum Bahnsteig gebracht wurde und die Eltern nach der Übergabe den leeren Kinderwagen nach Hause schoben - „traumatisch“, so Bingham.</p>
+<p>Als er alt genug war, trat Bingham in die englische Armee ein und wurde zunächst Fahrer. „Ich brauchte einen neuen Namen“, erzählt Bingham. Wenn er als deutscher Jude in Gefangenschaft der Nazis geraten wäre, hätte dies seinen Tod bedeutet. Sein Vorgesetzter gab ihm zur Namensfindung einen halben Tag frei. „Ich bin zur Telefonzelle im Ort gegangen und habe mir einen Namen ausgesucht“, erzählt er. Seine Initialen wollte er behalten und so wurde aus Wolfgang Billig Walter Bingham. Beim D-Day, dem Tag der Landung der Alliierten in der Normandie, war Bingham dabei. Stück für Stück kämpfte er sich voran. Kurz vor der Schlacht um Arnheim wurde er schließlich nach London zurückgerufen.</p>
+<p>Mit seinen Deutschkenntnissen war er wertvoll für den englischen Geheimdienst und wurde dort ausgebildet. In Hamburg kam er schließlich zum Einsatz. „Ich hatte ein eigenes Büro im ehemaligen Gebäude der Gauleitung von Hamburg.“ Für Verhöre wurden ihm deutsche Gefangene zugeführt. Einer von ihnen war Joachim von Ribbentrop, Reichsminister des Auswärtigen unter den Nazis und später in den Nürnberger Prozessen zum Tode verurteilt. Bis heute ist Bingham fassungslos über dessen Auftreten. „Ich habe ihn gefragt, was er über die Endlösung erzählen kann, und er meinte, er wisse davon nichts, dies sei alleine der Führer gewesen“, berichtet Bingham.</p>
+<p>Dennoch gab es auch emotional schöne Momente in dieser Zeit. Seine Mutter hatte den Krieg und mehrere Lager überlebt und konnte schließlich nach Schweden fliehen. Nach sieben Jahren der Trennung trafen sich Mutter und Sohn in Kopenhagen zum ersten Mal wieder. Auch wenn Bingham von den Erlebnissen seiner Kindheit und der Verfolgung geprägt wurde, hat er doch das Leben auch genossen: „Ich habe einen Pilotenschein gemacht und bin sogar einmal von England bis nach Israel geflogen“, erzählt er.</p>
+<p>Nach dem Tod seiner Frau wanderte Bingham nach Israel aus, wo er seit 2004 lebt. Bis heute arbeitet er als Journalist fürs Radio und die Zeitung. „Mittlerweile mache ich ein bisschen weniger“, sagt er mit einem Lächeln. -ds-</p>
+                                    </div></div>]]></content>
+        <published>2026-02-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Fortführung des Kita-Betriebs hat Priorität]]></title>
         <id>c78bc8e9429a68a258c5e7244e573971</id>
         <link href="https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/fortfuehrung-des-kita-betriebs-hat-prioritaet"/>
@@ -205,58 +239,6 @@
                                         <p>Fastnacht bedeutet bunte Kostüme, fröhliche Menschen und jede Menge Stimmung. Aber leider auch viel Müll.</p>
 <p>Damit nach den Umzügen alles wieder blitzsauber ist, ist das Team Sauberes Karlsruhe (TSK) im Einsatz: Beim großen Karlsruher Umzug in der Innenstadt, beim Durlacher Umzug und beim Grötzinger Narrensprung sorgt die Straßenreinigung des TSK dafür, dass die Straßen schnell wieder sauber werden.</p>
 <p>Lesen Sie die <a href="https://www.karlsruhe.de/fileadmin/user_upload_2/20260206_Pressemeldung_Faschingsumzuege.pdf" title="Download" target="_blank" download="20260206_Pressemeldung_Faschingsumzuege.pdf">komplette Pressemeldung<span> 340 KB (PDF)</span></a> des TSK.</p>
-                                    </div></div>]]></content>
-        <published>2026-02-06T00:00:00.000Z</published>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Schmerzen im Alter müssen nicht sein]]></title>
-        <id>23b97540b038baeeaee980309d3ed9f8</id>
-        <link href="https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/schmerzen-im-alter-muessen-nicht-sein"/>
-        <updated>2026-02-06T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Am 19. Februar 2026 um 15 Uhr ist Dr. Ingeborg Cuvelier, Fachärztin für Innere Medizin, Geriatrie und Ernährungsmedizin, für einen Fachvortrag zu Gast in der Karlsruher Stadtbibliothek.]]></summary>
-        <content type="html"><![CDATA[<div id="readability-page-1" class="page"><div>
-                                            
-                                                
-                                                    
-                                                        
-
-
-<picture>
-    <source media="(min-width: 992px)" data-srcset="/fileadmin/_processed_/8/b/csm_ka-barrierefrei-1770360070_7d9785cea7.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <source media="(min-width: 768px)" data-srcset="/fileadmin/_processed_/8/b/csm_ka-barrierefrei-1770360070_80a6cf0338.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <source media="(min-width: 0)" data-srcset="/fileadmin/_processed_/8/b/csm_ka-barrierefrei-1770360070_943bc1cad7.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <img alt="Senioren die auf einen See schauen" title="Ka-barrierefrei" data-src="/fileadmin/_processed_/8/b/csm_ka-barrierefrei-1770360070_943bc1cad7.jpeg" width="100%" src="https://www.karlsruhe.de/fileadmin/_processed_/8/b/csm_ka-barrierefrei-1770360070_943bc1cad7.jpeg">
-</picture>
-
-        <p><span>In einem Vortrag in der Stadtbibliothek geht es um Behandlungsmethoden von Schmerzen.</span>
-    
-
-        
-            <span>© Stadt Karlsruhe, Stabsstelle VME, Martin Wagenhan</span>
-        
-    
-
-                                                    
-                                                    
-                                                    
-                                                
-                                            
-                                        </p></div><div itemprop="articleBody">
-                                        <p>Schmerzen im Alter haben viele Gesichter – und oft gibt es mehr als nur eine Ursache. Umso wichtiger ist es, gut informiert zu sein. Am <strong>Donnerstag, 19. Februar</strong>, um <strong>15 Uhr</strong> ist <strong>Dr. Ingeborg Cuvelier,</strong> Fachärztin für Innere Medizin, Geriatrie und Ernährungsmedizin sowie leitende Ärztin der Mobilen Geriatrischen Rehabilitation der Klinik für Geriatrie, ViDia Kliniken, zu Gast in der <strong>Stadtbibliothek</strong> in der Ständehausstraße 2. Sie erläutert in ihrem Vortrag, welche Ursachen hinter <strong>Schmerzen im Alter</strong> stehen können und welche Behandlungswege heute helfen, den Alltag wieder leichter und aktiver zu gestalten. Im Anschluss an den Vortrag ist Zeit für Fragen, persönliche Anliegen und den gemeinsamen Austausch.</p>
-<p>Die kostenfreie Veranstaltung ist Teil der Vortragsreihe „Gut informiert und aktiv leben“ von Seniorenbüro und Stadtbibliothek.</p>
-                                    </div></div>]]></content>
-        <published>2026-02-06T00:00:00.000Z</published>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Wertstoffstationen Daxlanden und Grötzingen am Samstag zu]]></title>
-        <id>b7ecb307475f052884521d13f4f52816</id>
-        <link href="https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/wertstoffstationen-daxlanden-und-groetzingen-am-samstag-zu"/>
-        <updated>2026-02-06T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Alle anderen Karlsruher Wertstoffstationen sind an diesem Tag zu den regulären Öffnungszeiten geöffnet.]]></summary>
-        <content type="html"><![CDATA[<div id="readability-page-1" class="page"><div itemprop="articleBody">
-                                        <p>Die <strong>Wertstoffstationen in Daxlanden und Grötzingen</strong> müssen am <strong>Samstag, 7. Februar</strong> 2026, aus betrieblichen Gründen <strong>geschlossen</strong> bleiben. Alle anderen Wertstoffstationen sind an diesem Tag zu den regulären Öffnungszeiten geöffnet.</p>
-<p>Das Team Sauberes Karlsruhe bittet um Beachtung und bedankt sich für das Verständnis. Weitere Informationen zu den städtischen Entsorgungseinrichtungen finden Sie auch auf unserer Internetseite <a href="https://tsk.karlsruhe.de/" title="Link zur Seite" target="_blank">www.team-sauberes-karlsruhe.de</a>.</p>
-
                                     </div></div>]]></content>
         <published>2026-02-06T00:00:00.000Z</published>
     </entry>
