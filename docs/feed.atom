@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.karlsruhe.de/aktuelles</id>
     <title>Stadt Karlsruhe - Aktuelle Meldungen</title>
-    <updated>2026-02-11T05:38:48.733Z</updated>
+    <updated>2026-02-11T08:56:50.673Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.karlsruhe.de/aktuelles"/>
     <link rel="self" href="https://maxliesegang.github.io/stadt-karlsruhe-syndication/feed.atom"/>
@@ -10,15 +10,15 @@
     <rights>Stadt Karlsruhe 2026</rights>
     <entry>
         <title type="html"><![CDATA[Fastnachtsumzüge in Karlsruhe und Durlach]]></title>
-        <id>7ede5ed57cd18a2b7a4a728d9e4a3ebc</id>
+        <id>c6db478ddefbaa7e88394980a31709b2</id>
         <link href="https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/fastnachtsumzuege-in-durlach-und-karlsruhe-2"/>
         <updated>2026-02-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Mit einem bewährten Konzept werden Polizei und Stadt auch in diesem Jahr dafür Sorge tragen, dass tausende Faschingsbegeisterte eine unbeschwerte, bunte und dennoch sichere Fastnacht feiern können.]]></summary>
         <content type="html"><![CDATA[<div id="readability-page-1" class="page"><div itemprop="articleBody">
                                         <p>Gemeinsame Pressemitteilung der Stadt Karlsruhe und des Polizeipräsidiums Karlsruhe:</p>
-<p>Die "närrischen Tage" rücken näher und damit auch die traditionellen Fastnachtsumzüge in Durlach am Sonntag, 5. Februar und am Dienstag, 17.&nbsp;Februar in Karlsruhe. Mit einem bewährten Konzept wird das Polizeipräsidium Karlsruhe auch in diesem Jahr gemeinsam mit Behörden, Zünften und privaten Sicherheitsunternehmen dafür Sorge tragen, dass tausende Faschingsbegeisterte eine unbeschwerte, bunte und dennoch sichere Fastnacht feiern können.</p>
+<p>Die "närrischen Tage" rücken näher und damit auch die traditionellen Fastnachtsumzüge in Durlach am Sonntag, 15. Februar und am Dienstag, 17.&nbsp;Februar in Karlsruhe. Mit einem bewährten Konzept wird das Polizeipräsidium Karlsruhe auch in diesem Jahr gemeinsam mit Behörden, Zünften und privaten Sicherheitsunternehmen dafür Sorge tragen, dass tausende Faschingsbegeisterte eine unbeschwerte, bunte und dennoch sichere Fastnacht feiern können.</p>
 <p>Die Teilnehmerinnen und Teilnehmer des Durlacher Fastnachtsumzugs stellen sich ab 12:00 Uhr in der Rommelstraße auf, von wo aus sich der Umzug um 14:11 Uhr in Bewegung setzt. Die Umzugsstrecke verläuft über die Rommelstraße - Auer Straße - Christofstraße - Gritzner Straße - Pfinztalstraße - Karlsburgstraße. Dort endet der Fastnachtsumzug voraussichtlich gegen 16:30 Uhr. Im Bereich der Durlacher Innenstadt wird es entlang des Zugweges zu Straßensperrungen und Verkehrsbeeinträchtigungen kommen. Die ersten erforderlichen Straßensperrungen werden ab 12:00 Uhr eingerichtet.</p>
-<p>Die Aufstellung für den Karlsruher Umzug erfolgt wie im Vorjahr ab 12:00 Uhr auf dem Festplatz und im Bereich der Beiertheimer Allee entlang des Kongresszentrums. Der Umzug startet um 14:11 Uhr und verläuft über die Beiertheimer Allee - Mathystraße - Karlstraße - Kaiserstraße - Marktplatz - Rondellplatz. Dort endet der Fastnachtsumzug gegen 16.30 Uhr. Im Bereich der Innenstadt wird es entlang des Zugweges ebenfalls zu Straßensperrungen und Verkehrsbeeinträchtigungen kommen. Mit den ersten erforderlichen Straßensperrungen muss ab ca. 12:00 Uhr gerechnet werden. Der Karoline-Luise-Tunnel ist von den Sperrmaßnahmen nicht beeinträchtigt. Lediglich die Ausfahrt im Tunnel in Richtung Stadtmitte von Westen kommend muss kurzzeitig gesperrt werden.</p>
+<p>Die Aufstellung für den Karlsruher Umzug erfolgt wie im Vorjahr ab 12:00 Uhr auf dem Festplatz und im Bereich der Beiertheimer Allee entlang des Kongresszentrums. Der Umzug startet um 14:11 Uhr und verläuft über die Beiertheimer Allee - Mathystraße - Karlstraße - Kaiserstraße - Marktplatz - Rondellplatz. Dort endet der Fastnachtsumzug gegen 16:30 Uhr. Im Bereich der Innenstadt wird es entlang des Zugweges ebenfalls zu Straßensperrungen und Verkehrsbeeinträchtigungen kommen. Mit den ersten erforderlichen Straßensperrungen muss ab ca. 12:00 Uhr gerechnet werden. Der Karoline-Luise-Tunnel ist von den Sperrmaßnahmen nicht beeinträchtigt. Lediglich die Ausfahrt im Tunnel in Richtung Stadtmitte von Westen kommend muss kurzzeitig gesperrt werden.</p>
 <p>Um jederzeit auf unterschiedliche Einsatzlagen reagieren zu können, werden an den Fastnachtstagen ausreichend Polizistinnen und Polizisten im Einsatz sein.</p>
 <p>Zudem wird an neuralgischen Punkten Präsenz gezeigt, um für einen möglichst störungsfreien Verlauf der Veranstaltungen sorgen zu können. Bei sich anbahnenden Störungen und konfliktträchtigen Situationen werden die Beamtinnen und Beamten frühzeitig und mit der gebotenen Konsequenz einschreiten.</p>
 <p>Außerdem werden zielgerichtete Personenkontrollen durchgeführt. Diese konzentrieren sich insbesondere auf die Einhaltung des im Juli 2025 in Kraft getretenen Waffen- und Messerverbots im öffentlichen Personen- und Nahverkehr, das darüber hinaus auch bei öffentlichen Veranstaltungen wie Faschingsumzügen gilt.</p>
@@ -148,7 +148,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Ein Zeitzeuge erinnert sich]]></title>
-        <id>e7764f9370278501ed391691540a4504</id>
+        <id>7b05e63b634e59955254e9fcdf61f689</id>
         <link href="https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/ein-zeitzeuge-erinnert-sich-1"/>
         <updated>2026-02-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Walter Bingham überlebte den Holocaust. Der in Karlsruhe geborene 102-Jährige wirkt ungleich lebendiger, als sein Alter vermuten lässt. Beim Empfang durch Oberbürgermeister Dr. Frank Mentrup sprach er über seine Erfahrungen.]]></summary>
@@ -167,7 +167,7 @@
                         <div>
 
                                 <p><time itemprop="datePublished" datetime="2026-02-09">
-                                        Gestern
+                                        Montag, 9. Februar 2026
                                     </time>
                                 </p>
 
@@ -305,7 +305,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Sperrmüll-Anmeldung wird schneller und einfacher]]></title>
-        <id>dd5237d12fdbf35b6988c4408a9e5e79</id>
+        <id>769eb682b7dc7c98b3a8cc6b4b535efc</id>
         <link href="https://www.karlsruhe.de/stadt-rathaus/aktuelles/meldungen/sperrmuell-anmeldungen-wird-schneller-und-einfacher"/>
         <updated>2026-02-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Mehr Bürgerservice: Das Team Sauberes Karlsruhe vereinfacht die Sperrmüll-Anmeldung. Abholung kurzfristig und flexibel möglich.]]></summary>
@@ -324,7 +324,7 @@
                         <div>
 
                                 <p><time itemprop="datePublished" datetime="2026-02-09">
-                                        Gestern
+                                        Montag, 9. Februar 2026
                                     </time>
                                 </p>
 
